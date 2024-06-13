@@ -5,21 +5,23 @@ import { useState } from 'react'
 //2. logica para cambiar
 export const Card = () => {
    const   [Color, setColor] =useState ('');
-onclick[input] = (Color) => {
+ColorChange => {
 
-    (HashChangeEvent,setColor, Color)
+    onClick(HashChangeEvent,setColor, Color)
 }
     return (
     <>
       <label htmlFor="">Elige el color de la card</label>
-      <inpu type="color" />
+      <input type="color" />
+
       <div className='card'>
         <div className="header-card"></div>
         <div className="main-card">
           <img src={imgCard} alt="Photo" /> 
         </div>
-        <div className="footer-card"></div>
+        <div className="footer-card">c{ColorChange()}</div>
       </div>    
     </>
   )
 }
+export default Card;
